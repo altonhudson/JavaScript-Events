@@ -35,3 +35,11 @@ userName.addEventListener("blur", function(e) {
 
 })
 
+let buttonContainer = document.querySelector('.button-container')
+let buttonLabel = document.querySelector('.button-label')
+buttonContainer.addEventListener('click', function(e) {
+    if (e.target.tagName === 'BUTTON') {
+        buttonLabel.innerHTML = e.target.textContent;
+    }
+})
+

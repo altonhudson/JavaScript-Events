@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Delegation Example</title>
+</head>
+<body>
+    <h1>Click an Item:</h1>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        // Access the parent element
+        const list = document.getElementById('itemList');
+
+        // Attach event listener to the parent element
+        list.addEventListener('click', function(event) {
+            // Check if the clicked element is a list item
+            if (event.target.tagName === 'LI') {
+                alert('You clicked: ' + event.target.textContent);
+                // Perform any additional logic here, such as updating other parts of the UI
+                event.target.style.backgroundColor = 'yellow'; // Highlight the clicked item
+            }
+        });
+    </script>
+</body>
+</html>
