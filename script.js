@@ -17,8 +17,21 @@ keyboardEvents.addEventListener('keydown', function(e) {
 let formButton = document.querySelector('.form-button')
 let userName = document.querySelector('.user-name')
 let password = document.querySelector('.password')
+let focusMessage = document.querySelector('.focus-message')
 
 formButton.addEventListener("click", function(e) {
     e.preventDefault()
     alert("Your form has been successfully submitted.")
 })
+
+userName.addEventListener("focus", function(e) {
+    focusMessage.innerHTML = "Input gained focus."
+    userName.style.backgroundColor = "lightyellow"
+})
+
+userName.addEventListener("blur", function(e) {
+    focusMessage.innerHTML = "Input lost focus."
+    userName.style.backgroundColor = "white"
+
+})
+
