@@ -1,2 +1,2 @@
 # JavaScript-Events
-Lab 5
+Lab 7
