@@ -35,6 +35,16 @@ userName.addEventListener("blur", function(e) {
 
 })
 
+password.addEventListener("focus", function(e) {
+    focusMessage.innerHTML = "Input gained focus."
+    password.style.backgroundColor = "lightyellow"
+})
+
+password.addEventListener("blur", function(e) {
+    focusMessage.innerHTML = "Input lost focus."
+    password.style.backgroundColor = "white"
+})
+
 let buttonContainer = document.querySelector('.button-container')
 let buttonLabel = document.querySelector('.button-label')
 buttonContainer.addEventListener('click', function(e) {
